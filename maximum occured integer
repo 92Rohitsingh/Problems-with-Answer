@@ -29,7 +29,7 @@ solution:
         int ans=v[0];
         for(int i=1;i<=maxx;i++)
         {
-            v[i]+=v[i-1];
+            v[i]+=v[i-1];   //use the method of prefix sum for calculating the frequencies
             if(v[i]>v[ans])
             ans=i;          //update the answer with maximum frequency element
         }
