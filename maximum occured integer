@@ -19,8 +19,6 @@ Output: 5
 Explanation: The given ranges are [1, 15] [5, 8] [9, 12] [13, 20] [21, 30]. The smallest number that is most common or appears most times in the ranges is 5.
 
 solution:
-Examples :
-
  int maxOccured(int n, int l[], int r[], int maxx) {
         vector<int>v(maxx+2,0);  //define a vector v which have a highest interger length
         for(int i=0;i<n;i++)
