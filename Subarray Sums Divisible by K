@@ -25,19 +25,19 @@ Problem:
 class Solution {
 public:
     int subarraysDivByK(vector<int>& nums, int k) {
-        unordered_map<int,int>mp;
-        mp[0]=1;
+        unordered_map<int,int>mp;       //Declare map to store the remainder
+        mp[0]=1;                        //store for remainder 0 as 1
         int ans=0;
         for(int i=0;i<nums.size();i++)
         {
             if(i>0)
-            nums[i]+=nums[i-1];
-            int r=nums[i]%k;
+            nums[i]+=nums[i-1];         //use prefix sum
+            int r=nums[i]%k;            //take the remainder
             if(r<0)
-            r+=k;
-            if(mp.find(r)!=mp.end())
-            ans+=mp[r];
-            mp[r]++;
+            r+=k;                       
+            if(mp.find(r)!=mp.end())    //find in the map the value is present or not
+            ans+=mp[r];                 //if exits then add to the answer
+            mp[r]++;                    //add the value in the map
         }
         return ans;
     }
