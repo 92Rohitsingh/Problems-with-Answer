@@ -40,20 +40,20 @@ class Solution {
 public:
     bool checkSubarraySum(vector<int>& nums, int k) {
         unordered_map<int,int>mp;
-        mp[0]=-1;       //for the remainder is 0 in the case of multiple of k
+        mp[0]=-1;       //for the remainder is 0 in the case of multiple of k.
         for(int i=0;i<nums.size();i++)
         {
             if(i>0)
-            nums[i]+=nums[i-1];           //use the concept of prefix sum and store the remainder
+            nums[i]+=nums[i-1];           //use the concept of prefix sum and store the remainder.
             int r=nums[i]%k;                         
-            if(mp.find(r)!=mp.end())       //check the remainder is previously occurs
-            {                              //if yes it means somevalues sum is a multiple of k  
-                if(i-mp[r]>=2)             //then check the length of somevalue sum if it is greater than 1 then true
+            if(mp.find(r)!=mp.end())       //check the remainder is previously occurs.
+            {                              //if yes it means somevalues sum is a multiple of k. 
+                if(i-mp[r]>=2)             //then check the length of somevalue sum if it is greater than 1 then true.
                 return true;
             }
             else
             mp[r]=i;
         }
-        return false;                       //if not satisfy the condition then return false 
+        return false;                       //if not satisfy the condition then return false.
     }
 };
