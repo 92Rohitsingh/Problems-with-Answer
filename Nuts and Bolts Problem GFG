@@ -37,7 +37,7 @@ class Solution {
         m['?']=7;
         m['@']=8;
         m['^']=9;
-        auto cmp=[this](char a,char b) {    //for using the map in the function 
+        auto cmp=[this](char a,char b) {    //for using the map in the function .
             return m[a]<m[b];
         };
         sort(nuts,nuts+n,cmp);
