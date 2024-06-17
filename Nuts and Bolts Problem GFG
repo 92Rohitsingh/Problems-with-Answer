@@ -5,7 +5,7 @@ Note: Make all the required changes directly in the given arrays, output will be
 
 Examples
 
-Input: n = 5, nuts[] = {@, %, $, #, ^}, bolts[] = {%, @, #, $ ^}
+Input: n = 5, nuts[] = {@, %, $, #, ^}, bolts[] = {%, @, #, $ ^}.
 Output: 
 # $ % @ ^
 # $ % @ ^
