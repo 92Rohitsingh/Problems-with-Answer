@@ -3,7 +3,7 @@ Given an integer array nums and an integer k, return true if nums has a good sub
 A good subarray is a subarray where:
 
 its length is at least two, and
-the sum of the elements of the subarray is a multiple of k.
+the sum of the elements of the subarray is a multiple of k .
 Note that:
 
 A subarray is a contiguous part of the array
